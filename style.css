@@ -1,0 +1,182 @@
+* {
+    font-family: "Noto Sans KR", serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    all: unset;
+    /* 모든 기본 스타일 제거 */
+    box-sizing: border-box;
+    /* box-sizing을 설정하여 패딩, 보더 등을 포함한 전체 크기를 제어 */
+    cursor: pointer;
+    /* 마우스 커서를 포인터로 변경 */
+    display: inline-block;
+    /* 버튼 요소를 인라인 블록으로 표시 */
+}
+
+
+.header {
+    display: flex;
+    padding: 8px;
+    /* background-color: rgb(255, 180, 180); */
+}
+
+/* 상단 좌측 로고 영역 */
+.header__menu {
+    min-width: 280px;
+    display: flex;
+    background-color: aliceblue;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu__button {
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.menu__button:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+.header__menu .header__logo {
+    font-size: 26px;
+}
+
+
+
+/* 상단 검색바 영역 */
+.header__search {
+    display: flex;
+    align-items: center;
+    flex: 1 1 100%;
+    background-color: rgb(243, 239, 233);
+}
+
+.search__container {
+    height: 48px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    /* align-items: center; */
+    padding: 8px;
+}
+
+.search__button{
+    padding: 6px;
+    border-radius: 50%;
+
+}
+
+.search__button:hover {
+    background-color: #f1f1f1;
+}
+
+.search__input {
+    width: 680px;
+    background-color: transparent;
+    border: none;
+    padding: 0 6px;
+    font-size: 16px;
+}
+
+/* input 포커스 스타일 초기화 */
+input[type="search"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.search__icon {
+    /* padding: 4px; */
+    border-radius: 50%;
+    /* background-color: antiquewhite; */
+    font-size: 20px;
+}
+
+
+/* 상단 우측 로그인정보 */
+.header__user-info {
+    display: flex;
+    width: 280px;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+.user-info__icon {
+    font-size: 24px;
+}
+
+.user-info__name {
+    background-color: black;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main 영역 */
+
+.main {
+    display: flex;
+    padding: 8px;
+}
+.main__nav {
+    background-color: antiquewhite;
+    min-width: 280px;
+    height: 100vh;
+  
+}
+.nav__send {
+    margin: 10px 0;
+}
+
+.send__button {
+    width: 140px;
+    padding: 12px;
+    background-color: aqua;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.send__button .send__icon, .send__text{
+    vertical-align: middle;
+}
+
+.send__button .send__icon {
+    margin-right: 10px;
+}
+
+
+/* 좌측 메뉴 리스트 */
+.nav__menu-list {
+
+}
+
+.menu-list__item {
+ display: flex;
+ gap:5px;
+ padding: 4px 8px;
+ background-color: aqua;
+ border-radius: 0 20px 20px 0;;
+ font-size: 16px;
+}
+
+.item__icon {
+    font-size:20px;;
+}
+
+.nav__bottom {
+    /* display: flex; */
+    align-items: flex-end;
+}
