@@ -12,7 +12,6 @@
     <!-- 폰트 link -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="reset.css" /> -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -69,75 +68,75 @@
 
 
 
-        <section class="main">
-            <div class="main__nav">
+        <section class="mail">
+            <div class="mail__nav">
                 <div class="nav__send">
                     <button class="send__button">
-                        <span class="send__icon material-symbols-rounded">
+                        <span class="button__icon material-symbols-rounded">
                             edit
                         </span>
-                        <span class="send__text">편지쓰기</span>
+                        <span class="button__text">편지쓰기</span>
                     </button>
                 </div>
 
-                <div class="nav__menu-list">
-                    <div class="menu-list__item">
+                <div class="nav__menu">
+                    <div class="menu__item">
                         <span class="item__icon material-symbols-rounded">
                             folder_open
                         </span>
                         <span class="item__text">받은편지함</span>
                     </div>
 
-                    <div class="menu-list__item">
+                    <div class="menu__item">
                         <span class="item__icon material-symbols-rounded"> star </span>
                         <span class="item__text">별표편지함</span>
                     </div>
 
-                    <div class="menu-list__item">
+                    <div class="menu__item">
                         <span class="item__icon material-symbols-rounded"> send </span>
                         <span class="item__text">보낸편지함</span>
                     </div>
-                    <div class="menu-list__item">
+
+                    <div class="menu__item">
                         <span class="item__icon material-symbols-rounded"> description </span>
                         <span class="item__text">임시보관함</span>
                     </div>
-                    <div class="menu-list__item">
+
+                    <div class="menu__item">
                         <span class="item__icon material-symbols-rounded"> steppers </span>
                         <span class="item__text">더보기</span>
                     </div>
                 </div>
 
                 <div class="nav__bottom">
-                    <button class="bottom__dark-mode">
-                        <span class="dark-mode__icon material-symbols-rounded">
+                    <button class="bottom__button">
+                        <span class="button__icon material-symbols-rounded">
                             dark_mode
-
                     </button>
                 </div>
             </div>
 
-            <div class="main__mail-list">
-                <div class="mail-list__top">
-                    <div class="top__toolbar">
-                        <div class="toobar__item">
+            <div class="mail__list">
+                <div class="list__toolbar">
+                    <div class="toolbar__row">
+                        <div class="row__item action">
 
                             <input type="checkbox">
-
-
+                            
                             <button>
                                 <span class="material-symbols-rounded">
                                     arrow_drop_down
                                 </span>
                             </button>
                         </div>
-                        <div class="toobar__item">
+                        <div class="row__item action">
                             <button>
                                 <span class="material-symbols-rounded">
                                     refresh
                                 </span>
                             </button>
                         </div>
-                        <div class="toobar__item">
+                        <div class="row__item action">
                             <button>
                                 <span class="material-symbols-rounded">
                                     more_vert
@@ -145,20 +144,20 @@
                             </button>
                         </div>
                     </div>
-                    <div class="top__toolbar">
-                        <div class="toobar__item">
-                            <span class="text">
-                                825개 중 1-50개
+                    <div class="toolbar__row">
+                        <div class="row__item--text">
+                            <span>
+                                123개 중 1-50
                             </span>
                         </div>
-                        <div class="toobar__item">
+                        <div class="row__item--pagination">
                             <button>
                                 <span class="material-symbols-rounded">
                                     arrow_back_ios
                                 </span>
                             </button>
                         </div>
-                        <div class="toobar__item">
+                        <div class="row__item--pagination">
                             <button>
                                 <span class="material-symbols-rounded">
                                     arrow_forward_ios
@@ -168,10 +167,138 @@
                     </div>
                 </div>
 
-                <div class="mail-list__content">
+                <!-- 메일목록 테이블 -->
+                <div class="list__content">
+                    <div class="content__filter">
+                        <button class="filter__button default">
+                            <span class="material-symbols-rounded">
+                                inbox
+                            </span>
+                            <span>기본</span>
+                        </button>
 
+                        <button class="filter__button">
+                            <span class="material-symbols-rounded">
+                                book
+                            </span>
+                            <span>프로모션</span>
+                        </button>
+
+                        <button class="filter__button">
+                            <span class="material-symbols-rounded">
+                                group
+                            </span>
+                            <span>소셜</span>
+                        </button>
+                    </div>
+
+                    <table class="content__table">
+                        <tbody class="content__table-body">
+                            <tr class="table__row">
+                                <td class="table__cell">
+                                    <input type="checkbox">
+                                </td>
+                                <td class="table__cell">
+                                    <button class="favorite-button">
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </button>
+                                </td>
+                                <td class="table__cell name">
+                                    <span class="name">이소연dddddddd</span>
+                                </td>
+                                <td class="table__cell title">
+                                    <span class="title">이메일 제목입니다 이메일 제목입니다 이메일 제목입니다ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</span>
+                                </td>
+                                <td class="table__cell time">
+                                    <span class="time">오전 9:32</span>
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">
+                                    <input type="checkbox">
+                                </td>
+                                <td class="table__cell">
+                                    <button class="favorite-button">
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </button>
+                                </td>
+                                <td class="table__cell name">
+                                    <span class="name">이소연dddddddd</span>
+                                </td>
+                                <td class="table__cell title">
+                                    <span class="title">이메일 제목입니다 이메일 제목입니다 이메일 제목입니다ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</span>
+                                </td>
+                                <td class="table__cell time">
+                                    <span class="time">오전 9:32</span>
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">
+                                    <input type="checkbox">
+                                </td>
+                                <td class="table__cell">
+                                    <button class="favorite-button">
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </button>
+                                </td>
+                                <td class="table__cell name">
+                                    <span class="name">이소연dddddddd</span>
+                                </td>
+                                <td class="table__cell title">
+                                    <span class="title">이메일 제목입니다 이메일 제목입니다 이메일 제목입니다ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</span>
+                                </td>
+                                <td class="table__cell time">
+                                    <span class="time">오전 9:32</span>
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">
+                                    <input type="checkbox">
+                                </td>
+                                <td class="table__cell">
+                                    <button class="favorite-button">
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </button>
+                                </td>
+                                <td class="table__cell name">
+                                    <span class="name">이소연dddddddd</span>
+                                </td>
+                                <td class="table__cell title">
+                                    <span class="title">이메일 제목입니다 이메일 제목입니다 이메일 제목입니다ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</span>
+                                </td>
+                                <td class="table__cell time">
+                                    <span class="time">오전 9:32</span>
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">
+                                    <input type="checkbox">
+                                </td>
+                                <td class="table__cell">
+                                    <button class="favorite-button">
+                                        <span class="material-symbols-rounded"> star </span>
+                                    </button>
+                                </td>
+                                <td class="table__cell name">
+                                    <span class="name">이소연dddddddd</span>
+                                </td>
+                                <td class="table__cell title">
+                                    <span class="title">이메일 제목입니다 이메일 제목입니다 이메일 제목입니다ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</span>
+                                </td>
+                                <td class="table__cell time">
+                                    <span class="time">오전 9:32</span>
+                                </td>
+                            </tr>
+
+                     
+              
+                        </tbody>
+                    </table>
+                    
                 </div>
             </div>
+
+            <!-- 좌측 사이드 아이콘바 -->
             <div class="main__side-bar">
                 <button>
                     <span class="material-symbols-rounded">

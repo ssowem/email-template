@@ -1,3 +1,4 @@
+
 * {
     font-family: "Noto Sans KR", serif;
     font-weight: 400;
@@ -5,6 +6,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f8fc;
 }
 
 button {
@@ -44,11 +49,9 @@ button {
     padding: 10px;
     border-radius: 50%;
     display: flex;
-}
-
-.menu__button:hover {
     background-color: #f1f1f1;
 }
+
 
 
 
@@ -63,22 +66,25 @@ button {
     display: flex;
     align-items: center;
     flex: 1 1 100%;
-    background-color: rgb(243, 239, 233);
+    background-color: #f6f8fc;
 }
 
 .search__container {
     height: 48px;
-    background-color: #fff;
+    background-color: #eaf1fb;
     border-radius: 30px;
     display: flex;
     /* align-items: center; */
     padding: 8px;
 }
 
-.search__button{
+.search__container:hover {
+    /* background-color: #fff; */
+}
+
+.search__button {
     padding: 6px;
     border-radius: 50%;
-
 }
 
 .search__button:hover {
@@ -87,17 +93,19 @@ button {
 
 .search__input {
     width: 680px;
-    background-color: transparent;
     border: none;
     padding: 0 6px;
     font-size: 16px;
+    background-color: transparent;
 }
+
 
 /* input 포커스 스타일 초기화 */
 input[type="search"]:focus {
     outline: none;
     box-shadow: none;
 }
+
 
 .search__icon {
     /* padding: 4px; */
@@ -131,27 +139,27 @@ input[type="search"]:focus {
     justify-content: center;
 }
 
-/* main 영역 */
+/* mail 영역 */
 
-.main {
+.mail {
     flex-grow: 1;
     display: flex;
     /* padding: 8px; */
 }
 
-.main__nav {
+.mail__nav {
     background-color: #f6f8fc;
     min-width: 280px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
+
 }
 
 .nav__send {
-    margin: 14px 0;
-    padding: 0 0 0 8px;
+    margin-top: 10px;
+    padding: 0 0 14px 8px;
 }
 
 .send__button {
@@ -164,37 +172,45 @@ input[type="search"]:focus {
     justify-content: center;
 }
 
-.send__icon, .send__text{
-    vertical-align: middle;
+.send__button:hover {
+    box-shadow: 0 3px 6px rgba(143, 143, 143, 0.3);
 }
 
-.send__icon {
-    margin-right: 10px;
+.send__button .button__icon {
+    font-size: 20px;
 }
 
-.send__text {
+.button__text{
     font-size: 14px;
+    margin-left: 10px;
 }
+
 
 /* 좌측 메뉴 영역 */
-.nav__menu-list {
-    flex-grow: 1;
-    /* 남은 공간 채움 */
+.nav__menu {
+    flex-grow: 1; /* 남은 공간 채움 */
 }
 
-.menu-list__item {
- display: flex;
- align-items: center;
- gap: 8px;
- padding: 8px 8px 8px 32px;
- margin: 0 16px 0 0;
- background-color: aqua;
- border-radius: 0 20px 20px 0;;
- font-size: 16px;
+.menu__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 8px 8px 32px;
+    margin: 0 16px 0 0;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.menu__item:first-child {
+    background-color: #d3e3fd;
+}
+
+.menu__item:not(:first-child):hover {
+    background-color: #e6e6e6;
 }
 
 .item__icon {
-    font-size:20px;
+    font-size: 18px;
 }
 
 .item__text {
@@ -203,75 +219,189 @@ input[type="search"]:focus {
 
 /* 좌측 하단 다크모드 */
 .nav__bottom {
-
-    /* justify-content: center; */
     padding: 14px;
 }
 
-.bottom__dark-mode {
+.bottom__button {
     display: flex;
     align-items: center;
     background-color: #c2e7ff;
     border-radius: 50%;
     padding: 8px;
-  
 }
 
-.dark-mode__icon {
+.bottom__button .button__icon {
     font-size: 30px;
 }
 
-
-.main__mail-list {
-    background-color: #c3cecc;
+/* 메일 목록 영역 */
+.mail__list {
+    background-color: #fff;
     flex-grow: 1;
+    border-radius: 10px;
+    /* border: 1px solid #000; */
+    padding: 14px;
 }
 
-
-.mail-list__top {
+/* 메일 목록 영역, 상단 툴바 */
+.list__toolbar {
     display: flex;
     justify-content: space-between;
 }
 
-.top__toolbar {
+.toolbar__row {
     display: flex;
-/* align-items: center; */
+    gap: 10px;
 }
 
-.toobar__item {
+.row__item {
     display: flex;
     align-items: center;
 }
 
-.toobar__item .text {
+.row__item .text {
     font-size: 14px;
 }
 
-.toobar__item > button {
+.row__item > button {
     display: flex;
     align-items: center;
 }
 
-.toobar__item > button > span {
-    font-size: 18px;
-    border: 1px solid green;
+.row__item.action > button > span {
+    font-size: 16px;
 }
 
-
-
-.toobar__item{
-
+.row__item--pagination > button > span {
+    font-size: 12px;
 }
 
-.toobar__item button span{
-  
+.row__item--text {
+    display: flex;
+    align-items: center;
+}
 
+.row__item--text > span {
+    font-size: 12px;
+}
+
+/* 메일 목록 영역 */
+
+.list__content {
+    margin-top: 18px;
+}
+
+.content__filter {
+    display: flex;
+}
+
+.filter__button {
+    width: 190px;
+    height: 50px;
+    /* background-color: rgb(219, 219, 219);; */
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.filter__button > span {
+    font-size: 14px;
+}
+
+.filter__button > span:first-child {
+    margin-right: 10px;
+}
+
+.filter__button.default {
+    color: #0b57d0;
+    border-bottom: 3px solid #0b57d0;
+}
+
+/* 메일 테이블 */
+
+.content__table {  
+    display: flex;
+}
+
+.content__table-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: pink; */
+    flex-grow: 1;
+}
+
+.table__row {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    border-top: 1px solid #f1f1f1;
+    padding: 8px;
+}
+
+.table__row:last-child {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.table__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-button {
+    display: flex;
+}
+
+.favorite-button > span {
+    font-size: 20px;
+}
+
+.table__cell > span {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.table__cell:not(:first-child) {
+    margin-left: 10px;
+}
+
+.table__cell.name {
+    min-width: 120px;
+}
+
+.table__cell.title {
+    min-width:120px;
+    flex-grow: 1;
+}
+
+.table__cell.time {
+    min-width:80px;
+    display: flex;
+    justify-content: center;
 }
 
 /* 우측 사이드바 */
 .main__side-bar {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    align-items: center;
+    padding: 14px;
     gap: 14px;
+}
+
+.main__side-bar > button {
+    display: flex;
+    padding: 8px;
+}
+.main__side-bar > button:hover {
+    border-radius: 50%;
+    background-color: #e6e6e6;  
+}
+
+.main__side-bar > button > span{
+    font-size: 18px;
 }
