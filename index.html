@@ -13,14 +13,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="wrap">
-        <section class="header">
+        <section id="header">
             <div class="header__menu">
 
-                <button class="menu__button">
+                <button id="menu__button">
                     <span class="menu__icon material-symbols-rounded">
                         menu
                     </span>
@@ -68,48 +69,48 @@
 
 
 
-        <section class="mail">
-            <div class="mail__nav">
-                <div class="nav__send">
-                    <button class="send__button">
+        <section id="mail">
+            <div id="mail__nav">
+                <div id="nav__send">
+                    <button id="send__button">
                         <span class="button__icon material-symbols-rounded">
                             edit
                         </span>
-                        <span class="button__text">편지쓰기</span>
+                        <span class="button__text txt">편지쓰기</span>
                     </button>
                 </div>
 
-                <div class="nav__menu">
+                <div id="nav__menu">
                     <div class="menu__item">
                         <span class="item__icon material-symbols-rounded">
                             folder_open
                         </span>
-                        <span class="item__text">받은편지함</span>
+                        <span class="item__text txt">받은편지함</span>
                     </div>
 
                     <div class="menu__item">
                         <span class="item__icon material-symbols-rounded"> star </span>
-                        <span class="item__text">별표편지함</span>
+                        <span class="item__text txt">별표편지함</span>
                     </div>
 
                     <div class="menu__item">
                         <span class="item__icon material-symbols-rounded"> send </span>
-                        <span class="item__text">보낸편지함</span>
+                        <span class="item__text txt">보낸편지함</span>
                     </div>
 
                     <div class="menu__item">
                         <span class="item__icon material-symbols-rounded"> description </span>
-                        <span class="item__text">임시보관함</span>
+                        <span class="item__text txt">임시보관함</span>
                     </div>
 
                     <div class="menu__item">
                         <span class="item__icon material-symbols-rounded"> steppers </span>
-                        <span class="item__text">더보기</span>
+                        <span class="item__text txt">더보기</span>
                     </div>
                 </div>
 
                 <div class="nav__bottom">
-                    <button class="bottom__button">
+                    <button id="bottom__button">
                         <span class="button__icon material-symbols-rounded">
                             dark_mode
                     </button>
@@ -122,7 +123,7 @@
                         <div class="row__item action">
 
                             <input type="checkbox">
-                            
+
                             <button>
                                 <span class="material-symbols-rounded">
                                     arrow_drop_down
