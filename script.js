@@ -1,4 +1,8 @@
 const menuBtn = document.getElementById('menu__button');
+const sendBtn = document.getElementById('send__button');
+const boxCloseBtn = document.getElementById('close__button');
+
+const mailBoxWrap = document.getElementById('mail-box__wrap');
 
 menuBtn.addEventListener("click", () => {
     const sendBtn = document.getElementById('send__button');
@@ -27,4 +31,13 @@ menuBtn.addEventListener("click", () => {
     itemInner.forEach(function(item){
         item.classList.toggle('inner__active')
     })
+})
+
+sendBtn.addEventListener("click", () => {
+ 
+    mailBoxWrap.style.display="block";
+})
+
+boxCloseBtn.addEventListener("click", () => {
+    mailBoxWrap.style.display="none";
 })
