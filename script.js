@@ -1,8 +1,10 @@
 const menuBtn = document.getElementById('menu__button');
 const sendBtn = document.getElementById('send__button');
 const boxCloseBtn = document.getElementById('close__button');
+const toogleSizeBtn = document.getElementById('toggle-size__button')
 
 const mailBoxWrap = document.getElementById('mail-box__wrap');
+const mailBox = document.getElementById('mail-box');
 
 menuBtn.addEventListener("click", () => {
     const sendBtn = document.getElementById('send__button');
@@ -34,10 +36,48 @@ menuBtn.addEventListener("click", () => {
 })
 
 sendBtn.addEventListener("click", () => {
- 
-    mailBoxWrap.style.display="block";
+    mailBoxWrap.style.display = "block";
 })
 
+// 편지쓰기 모달 닫기 버튼 클릭했을때
 boxCloseBtn.addEventListener("click", () => {
-    mailBoxWrap.style.display="none";
+    mailBoxWrap.style.display = "none";
+    mailBoxWrap.classList.remove('box-wrap__active');
+    mailBox.classList.remove('box__active');
+    isActive = false;
+    modalHandle();
 })
+
+// 편지쓰기 모달크기 확대 버튼에 대한 변수(기본크기일때 false);
+let isActive = false;
+
+toogleSizeBtn.addEventListener("click", () => {
+    isActive = !isActive;
+    console.log(isActive)
+    if(isActive === true) {
+        mailBoxWrap.classList.add('box-wrap__active');
+        mailBox.classList.add('box__active');
+    } else {
+        mailBoxWrap.classList.remove('box-wrap__active');
+        mailBox.classList.remove('box__active');
+    }
+    // mailBoxWrap.classList.toggle('box-wrap__active');
+    // mailBox.classList.toggle('box__active');
+    modalHandle();
+})
+
+
+function modalHandle() {
+    const modalBg = document.getElementById("modal-bg");
+    if(isActive === true) {
+        modalBg.style.display = "block";
+    }else {
+        modalBg.style.display = "none";
+    }
+
+    // if(mailBoxWrap.classList.contains('box-wrap__active')) {
+    //     modalBg.style.display = "block";
+    // } else {
+    //     modalBg.style.display = "none";
+    // }
+}
