@@ -17,7 +17,31 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <div id="loading-wrap">
+        <div class="content">
+            <div class="container">
+                <div class="side"></div>
+                <div class="top">
+                    <div class="middle"></div>
+                </div>
+
+                <div class="reverse">
+                    <div class="side"></div>
+                    <div class="top">
+                        <div class="middle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="circle"></div>
+        </div>
+
+        <div class="progress-bar">
+            <div></div>
+        </div>
+    </div>
+
+    <div id="content-wrap">
         <section id="header">
             <div class="header__menu">
 
@@ -52,19 +76,24 @@
             </div>
 
             <div class="header__user-info">
-                <span class="user-info__icon material-symbols-rounded">
-                    settings
-                </span>
+                <button>
+                    <span class="user-info__icon material-symbols-rounded">
+                        settings
+                    </span>
+                </button>
 
-                <span class="user-info__icon material-symbols-rounded">
-                    apps
-                </span>
+                <button>
+                    <span class="user-info__icon material-symbols-rounded">
+                        apps
+                    </span>
+                </button>
 
-                <div class="user-info__name">
-                    <span>소연</span>
-                </div>
+                <button>
+                    <div class="user-info__name">
+                        <span>소연</span>
+                    </div>
+                </button>
             </div>
-
         </section>
 
 
@@ -686,165 +715,161 @@
                     </span>
                 </button>
             </div>
-
-
-
-           
-            <div id="mail-box__wrap">
-                <div id="mail-box">
-                    <div class="mail-box__header">
-                        <div class="mail-box__title">
-                            <span>새 메일</span>
-                        </div>
-
-                        <div class="mail-box__controls">
-                            <button id="minimize__button">
-                                <span class="material-symbols-rounded">
-                                    minimize
-                                </span>
-                            </button>
-                            <button id="toggle-size__button">
-                                <span class="material-symbols-rounded">
-                                    open_in_full
-                                </span>
-                            </button>
-                            <button id="close__button">
-                                <span class="material-symbols-rounded">
-                                    close
-                                </span>
-                            </button>
-                        </div>
-
-                    </div>
-                    <div class="mail-box__body">
-                        <div class="mail-box__recipient">
-                            <input type="text" placeholder="수신자">
-                        </div>
-                        <div class="mail-box__subject">
-                            <input type="text" placeholder="제목">
-                        </div>
-                        <div class="mail-box__content">
-
-                            <textarea></textarea>
-
-                        </div>
-
-                        <!-- <div class="mail-box__editor">
-                            <div class="mail-box__editor-row">
-                                <span class="material-symbols-rounded">
-                                    undo
-                                </span>
-
-                                <span class="material-symbols-rounded">
-                                    undo
-                                </span>
-                            </div>
-
-                            <div class="mail-box__editor-row">
-                                <span>Sans Serif</span>
-                                <span class="material-symbols-rounded">
-                                    arrow_drop_down
-                                </span>
-                            </div>
-
-                            <div class="mail-box__editor-row">
-                                <span class="material-symbols-rounded">
-                                    match_case
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    arrow_drop_down
-                                </span>
-                            </div>
-
-                            <div class="mail-box__editor-row">
-                                <span class="material-symbols-rounded">
-                                    format_bold
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    format_italic
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    format_underlined
-                                </span>
-
-                            </div>
-
-                            <div class="mail-box__editor-row">
-                                <span class="material-symbols-rounded">
-                                    text_format
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    arrow_drop_down
-                                </span>
-                            </div>
-
-                            <div class="mail-box__editor-row">
-                                <span class="material-symbols-rounded">
-                                    format_align_left
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    arrow_drop_down
-                                </span>
-                            </div>
-                        </div> -->
-
-
-
-                        <div class="mail-box__actions">
-                            <div class="actions__submit">
-                                <button>보내기</button>
-                                <button>🔻</button>
-                            </div>
-
-                            <div class="actions__tools">
-                                <span class="material-symbols-rounded">
-                                    format_color_text
-                                    </span>
-                                <span class="material-symbols-rounded">
-                                    attach_file
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    link
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    sentiment_satisfied
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    cloud_download
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    image
-                                </span>
-
-                                <span class="material-symbols-rounded">
-                                    lock_clock
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    ink_pen
-                                </span>
-                                <span class="material-symbols-rounded">
-                                    more_vert
-                                </span>
-                            </div>
-
-                            <div class="actions__delete">
-                                <span class="material-symbols-rounded">
-                                    delete
-                                    </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </section>
 
         <div id="modal-bg">
             <!-- 편지쓰기 확대시 회색 백그라운드 -->
         </div>
 
+        <div id="mail-box__wrap">
+            <div id="mail-box">
+                <div class="mail-box__header">
+                    <div class="mail-box__title">
+                        <span>새 메일</span>
+                    </div>
+
+                    <div class="mail-box__controls">
+                        <button id="minimize__button">
+                            <span class="material-symbols-rounded">
+                                minimize
+                            </span>
+                        </button>
+                        <button id="toggle-size__button">
+                            <span class="material-symbols-rounded">
+                                open_in_full
+                            </span>
+                        </button>
+                        <button id="close__button">
+                            <span class="material-symbols-rounded">
+                                close
+                            </span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="mail-box__body">
+                    <div class="mail-box__recipient">
+                        <input type="text" placeholder="수신자">
+                    </div>
+                    <div class="mail-box__subject">
+                        <input type="text" placeholder="제목">
+                    </div>
+                    <div class="mail-box__content">
+
+                        <textarea></textarea>
+
+                    </div>
+
+                    <!-- <div class="mail-box__editor">
+                        <div class="mail-box__editor-row">
+                            <span class="material-symbols-rounded">
+                                undo
+                            </span>
+
+                            <span class="material-symbols-rounded">
+                                undo
+                            </span>
+                        </div>
+
+                        <div class="mail-box__editor-row">
+                            <span>Sans Serif</span>
+                            <span class="material-symbols-rounded">
+                                arrow_drop_down
+                            </span>
+                        </div>
+
+                        <div class="mail-box__editor-row">
+                            <span class="material-symbols-rounded">
+                                match_case
+                            </span>
+                            <span class="material-symbols-rounded">
+                                arrow_drop_down
+                            </span>
+                        </div>
+
+                        <div class="mail-box__editor-row">
+                            <span class="material-symbols-rounded">
+                                format_bold
+                            </span>
+                            <span class="material-symbols-rounded">
+                                format_italic
+                            </span>
+                            <span class="material-symbols-rounded">
+                                format_underlined
+                            </span>
+
+                        </div>
+
+                        <div class="mail-box__editor-row">
+                            <span class="material-symbols-rounded">
+                                text_format
+                            </span>
+                            <span class="material-symbols-rounded">
+                                arrow_drop_down
+                            </span>
+                        </div>
+
+                        <div class="mail-box__editor-row">
+                            <span class="material-symbols-rounded">
+                                format_align_left
+                            </span>
+                            <span class="material-symbols-rounded">
+                                arrow_drop_down
+                            </span>
+                        </div>
+                    </div> -->
+
+
+
+                    <div class="mail-box__actions">
+                        <div class="actions__submit">
+                            <button>보내기</button>
+                            <button>🔻</button>
+                        </div>
+
+                        <div class="actions__tools">
+                            <span class="material-symbols-rounded">
+                                format_color_text
+                            </span>
+                            <span class="material-symbols-rounded">
+                                attach_file
+                            </span>
+                            <span class="material-symbols-rounded">
+                                link
+                            </span>
+                            <span class="material-symbols-rounded">
+                                sentiment_satisfied
+                            </span>
+                            <span class="material-symbols-rounded">
+                                cloud_download
+                            </span>
+                            <span class="material-symbols-rounded">
+                                image
+                            </span>
+
+                            <span class="material-symbols-rounded">
+                                lock_clock
+                            </span>
+                            <span class="material-symbols-rounded">
+                                ink_pen
+                            </span>
+                            <span class="material-symbols-rounded">
+                                more_vert
+                            </span>
+                        </div>
+
+                        <div class="actions__delete">
+                            <span class="material-symbols-rounded">
+                                delete
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
+    
+    
 </body>
 
 </html>

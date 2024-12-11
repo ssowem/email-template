@@ -6,6 +6,14 @@ const toogleSizeBtn = document.getElementById('toggle-size__button')
 const mailBoxWrap = document.getElementById('mail-box__wrap');
 const mailBox = document.getElementById('mail-box');
 
+
+window.onload = function () {
+    setTimeout(function() {
+        document.getElementById('loading-wrap').style.visibility = 'hidden';
+        document.getElementById('loading-wrap').style.opacity = 0;
+    }, 1000);
+}
+
 menuBtn.addEventListener("click", () => {
     const sendBtn = document.getElementById('send__button');
     const sendWrap = document.getElementById('nav__send');
@@ -48,7 +56,7 @@ boxCloseBtn.addEventListener("click", () => {
     modalHandle();
 })
 
-// 편지쓰기 모달크기 확대 버튼에 대한 변수(기본크기일때 false);
+// 편지쓰기 모달크기 확대 버튼에 대한 변수(창열었을떄 = 기본크기일때 false);
 let isActive = false;
 
 toogleSizeBtn.addEventListener("click", () => {
